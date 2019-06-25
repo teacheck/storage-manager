@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "database_migration_verticle": {
+      "postgres_port": 5432,
+      "postgres_host": "postgres",
+      "postgres_username": "postgres",
+      "postgres_password": "admin",
+      "jdbc_database_url": "jdbc:postgresql://postgres:5432/teacheck"
+    },
+    "http_verticle": {
+      "http_server_port": 8080,
+      "http_server_host": "localhost",
+      "student_db_service_queue": "student.db.queue"
+    },
+    "database_service_verticle": {
+      "jdbc_database_url": "jdbc:postgresql://postgres:5432/teacheck",
+      "jdbc_driver_class": "org.postgresql.Driver",
+      "jdbc_max_pool_size": 30,
+      "sqlqueries_resource_file": "src/main/resources/db-queries.properties",
+      "student_db_service_queue": "student.db.queue",
+      "db_username": "postgres",
+      "db_password": "admin"
+    }
+  }
+}
